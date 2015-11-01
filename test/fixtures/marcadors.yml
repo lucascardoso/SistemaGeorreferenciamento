@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  latitude: 
+  longitude: 
+  porcentagem: 
+  nome: MyString
+
+two:
+  latitude: 
+  longitude: 
+  porcentagem: 
+  nome: MyString
