@@ -14,5 +14,8 @@ class MapaController < ApplicationController
     gon.lcois.to_json
   end
 
-
+ def criar_marcador
+	Marcador.create(latitude: params[:lat], longitude: params[:lng])
+	render text: params
+ end
 end
