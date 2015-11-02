@@ -1,14 +1,20 @@
 $(document).ready(function() {
+  
+  console.log(gon.marcadores);
+  console.log(gon.marcadores[0].latitude);
   handler = Gmaps.build('Google');
   handler.buildMap({internal: {id: 'mapa'}}, function(){
-    if(navigator.geolocation)
-      navigator.geolocation.getCurrentPosition(coordenadasMapa);
+    //if(navigator.geolocation)
+      //navigator.geolocation.getCurrentPosition(coordenadasMapa);
+    for (var i = 0; i < gon.marcadores.length; i++) {
+      coordenadasMapa(gon.marcadores[i].latitude, gon.marcadores[i].longitude)
+    };
   });
 
-  function coordenadasMapa(position){
+  function coordenadasMapa(latitude, longitude){
     var marker = handler.addMarker({
-      lat: position.coords.latitude,
-      lng: position.coords.longitude
+      lat: latitude,
+      lng: longitude
     });
     handler.map.centerOn(marker);
   }
