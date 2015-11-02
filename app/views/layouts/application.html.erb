@@ -2,13 +2,13 @@
 <html>
 <head>
   <title>Sistema Google Maps</title>
-  <%= include_gon %>
-  <script src="/assets/underscore.js"></script>
+  
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'http://maps.googleapis.com/maps/api/js?key='+Rails.application.secrets.api_google_maps+'&sensor=true&amp;libraries=geometry'%> 
   <%= javascript_include_tag 'http://google-maps-utility-library-v3.googlecode.com/svn/tags/markerclustererplus/2.0.14/src/markerclusterer_packed.js'%>
-
+  <%= include_gon %>
+  <script src="/assets/underscore.js"></script>
   <script type='text/javascript' src='/assets/jquery-2.1.4.min.js'></script>
   <script type='text/javascript' src='/assets/google_maps.js'></script>
   <%= csrf_meta_tags %>

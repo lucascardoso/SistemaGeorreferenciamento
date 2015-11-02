@@ -1,21 +1,16 @@
 $(document).ready(function() {
-  
-  console.log(gon.marcadores);
-  console.log(gon.marcadores[0].latitude);
+
   handler = Gmaps.build('Google');
   handler.buildMap({internal: {id: 'mapa'}}, function(){
-    //if(navigator.geolocation)
-      //navigator.geolocation.getCurrentPosition(coordenadasMapa);
-    for (var i = 0; i < gon.marcadores.length; i++) {
-      coordenadasMapa(gon.marcadores[i].latitude, gon.marcadores[i].longitude)
-    };
+    if(gon.locais != null)
+      coordenadasMapa(gon.locais);
   });
 
-  function coordenadasMapa(latitude, longitude){
-    var marker = handler.addMarker({
-      lat: latitude,
-      lng: longitude
-    });
-    handler.map.centerOn(marker);
+  function coordenadasMapa(locais){
+    console.log(locais);
+    var markers = handler.addMarkers(locais);
+    handler.bounds.extendWith(markers);
+    handler.fitMapToBounds();
+    handler.getMap().setZoom(14);
   }
 });
