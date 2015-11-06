@@ -14,7 +14,7 @@
  *= require_self
  */
 #map-container {
-  height: 400px;
+  height: 500px;
   border-radius: 16px 16px;
   border-color: #fff;
   border-style: solid;
@@ -23,6 +23,9 @@
   border-width: 7px;
 }
 #mapa{
-  height: 400px;
+  height: 500px;
   width: 100%;
+}
+.title-center {
+	text-align: center;
 }

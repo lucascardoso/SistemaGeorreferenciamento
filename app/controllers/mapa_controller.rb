@@ -18,4 +18,8 @@ class MapaController < ApplicationController
 	Marcador.create(latitude: params[:lat], longitude: params[:lng])
 	render text: params
  end
+
+ def pesquisar_local
+ 	
+ end
 end
