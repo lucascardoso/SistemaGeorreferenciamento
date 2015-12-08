@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   match "localizacao/latitude/:lat/longitude/:lng", to: "mapa#criar_marcador", via: [:get, :post]
+  match "localizacao/:lat&:lng&:status", to: "mapa#criar_marcador", via: [:get, :post]
 
   # You can have the root of your site routed with "root"
   root 'mapa#index'

@@ -3,7 +3,7 @@ class CreateMarcadores < ActiveRecord::Migration
     create_table :marcadores do |t|
       t.string :latitude
       t.string :longitude
-      t.decimal :porcentagem
+      t.string :status
       t.string :nome
 
       t.timestamps null: false

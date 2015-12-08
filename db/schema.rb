@@ -19,10 +19,10 @@ ActiveRecord::Schema.define(version: 20151101125845) do
   create_table "marcadores", force: :cascade do |t|
     t.string   "latitude"
     t.string   "longitude"
-    t.decimal  "porcentagem"
+    t.string   "status"
     t.string   "nome"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
